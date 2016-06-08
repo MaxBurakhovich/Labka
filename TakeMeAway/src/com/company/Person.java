@@ -1,7 +1,10 @@
-package com.company;
 
-/**
- * Created by Максим on 20.05.2016.
- */
 public class Person {
+    private int ID;
+    public char[] Name;
+    public char[] Surname;
+    public int PhoneNumber;
+    public coordinate Coordinates;
+    public destination Destination;
+    public int Color;
 }
