@@ -22,15 +22,12 @@ public class Person {
         String file = "Clients.txt";
 
         Person.this.ID = (Edit.Count_Lines(file) / 7) + 1;
-        EditFile.Add_To_File_Int(Person.this.ID,file);
 
         System.out.println("Enter Name: ");
         Person.this.Name = reader.nextLine();
-        EditFile.Add_To_File_String(Person.this.Name,file);
 
         System.out.println("Enter Surname: ");
         Person.this.Surname = reader.nextLine();
-        EditFile.Add_To_File_String(Person.this.Surname,file);
 
         do {
             System.out.println("Enter a phone number: ");
@@ -42,8 +39,6 @@ public class Person {
             Person.this.PhoneNumber = reader.nextInt();
         }
         while (Person.this.PhoneNumber < 0);
-
-        EditFile.Add_To_File_Int(Person.this.PhoneNumber,file);
 
         do {
             System.out.println("Enter coordsX: ");
@@ -67,8 +62,6 @@ public class Person {
         }
         while (Person.this.Coordinates.Y < 0);
 
-        EditFile.Add_To_File_Int_2(Person.this.Coordinates.X,Person.this.Coordinates.Y,file);
-
         do {
             System.out.println("Enter Destination coordsX: ");
             while (!reader.hasNextInt()) {
@@ -91,8 +84,6 @@ public class Person {
         }
         while (Person.this.Destination.Y < 0);
 
-        EditFile.Add_To_File_Int_2(Person.this.Destination.X,Person.this.Destination.Y,file);
-
         do {
             System.out.println("Enter color: ");
             while (!reader.hasNextInt()) {
@@ -104,6 +95,12 @@ public class Person {
         }
         while (Person.this.Color < 0);
 
+        EditFile.Add_To_File_Int(Person.this.ID,file);
+        EditFile.Add_To_File_String(Person.this.Name,file);
+        EditFile.Add_To_File_String(Person.this.Surname,file);
+        EditFile.Add_To_File_Int(Person.this.PhoneNumber,file);
+        EditFile.Add_To_File_Int_2(Person.this.Coordinates.X,Person.this.Coordinates.Y,file);
+        EditFile.Add_To_File_Int_2(Person.this.Destination.X,Person.this.Destination.Y,file);
         EditFile.Add_To_File_Int(Person.this.Color,file);
     }
 
@@ -113,16 +110,14 @@ public class Person {
         Scanner reader = new Scanner(System.in);
 
         String file = "drivers.txt";
+        
         Person.this.ID = (Edit.Count_Lines(file) / 7) + 1;
-        EditFile.Add_To_File_Int(Person.this.ID,file);
 
         System.out.println("Enter Name: ");
         Person.this.Name = reader.nextLine();
-        EditFile.Add_To_File_String(Person.this.Name,file);
 
         System.out.println("Enter Surname: ");
         Person.this.Surname = reader.nextLine();
-        EditFile.Add_To_File_String(Person.this.Surname,file);
 
         do {
             System.out.println("Enter a phone number: ");
@@ -134,8 +129,6 @@ public class Person {
             Person.this.PhoneNumber = reader.nextInt();
         }
         while (Person.this.PhoneNumber < 0);
-
-        EditFile.Add_To_File_Int(Person.this.PhoneNumber,file);
 
         do {
             System.out.println("Enter coordsX: ");
@@ -159,8 +152,6 @@ public class Person {
         }
         while (Person.this.Coordinates.Y < 0);
 
-        EditFile.Add_To_File_Int_2(Person.this.Coordinates.X,Person.this.Coordinates.Y,file);
-
         do {
             System.out.println("Enter Destination coordsX: ");
             while (!reader.hasNextInt()) {
@@ -183,8 +174,6 @@ public class Person {
         }
         while (Person.this.Destination.Y < 0);
 
-        EditFile.Add_To_File_Int_2(Person.this.Destination.X,Person.this.Destination.Y,file);
-
         do {
             System.out.println("Enter color: ");
             while (!reader.hasNextInt()) {
@@ -196,6 +185,12 @@ public class Person {
         }
         while (Person.this.Color < 0);
 
+        EditFile.Add_To_File_Int(Person.this.ID,file);
+        EditFile.Add_To_File_String(Person.this.Name,file);
+        EditFile.Add_To_File_String(Person.this.Surname,file);
+        EditFile.Add_To_File_Int(Person.this.PhoneNumber,file);
+        EditFile.Add_To_File_Int_2(Person.this.Coordinates.X,Person.this.Coordinates.Y,file);
+        EditFile.Add_To_File_Int_2(Person.this.Destination.X,Person.this.Destination.Y,file);
         EditFile.Add_To_File_Int(Person.this.Color,file);
     }
 
