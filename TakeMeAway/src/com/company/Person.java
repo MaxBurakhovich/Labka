@@ -18,43 +18,43 @@ public class Person {
     public void Add_New_Client(){
         Client Client = new Client();
         EditFile Edit = new EditFile();
-
-        Person.this.ID = (Edit.Count_Lines() / 7) + 1;
-        Edit.Add_To_File_Int(Person.this.ID);
+        String file = "Clients.txt";
+        Person.this.ID = (Edit.Count_Lines(file) / 7) + 1;
+        Edit.Add_To_File_Int(Person.this.ID,file);
 
         Scanner reader = new Scanner(System.in);
         System.out.println("Enter Name: ");
         Person.this.Name = reader.nextLine();
-        Edit.Add_To_File_String(Person.this.Name);
+        Edit.Add_To_File_String(Person.this.Name,file);
 
 
         System.out.println("Enter Surname: ");
         Person.this.Surname = reader.nextLine();
-        Edit.Add_To_File_String(Person.this.Surname);
+        Edit.Add_To_File_String(Person.this.Surname,file);
 
 
         System.out.println("Enter a phone number: ");
         Person.this.PhoneNumber = reader.nextInt();
-        Edit.Add_To_File_Int(Person.this.PhoneNumber);
+        Edit.Add_To_File_Int(Person.this.PhoneNumber,file);
 
 
         System.out.println("Enter coordsX: ");
         Person.this.Coordinates.X = reader.nextInt();
         System.out.println("Enter coordsY: ");
         Person.this.Coordinates.Y = reader.nextInt();
-        Edit.Add_To_File_Int_2(Person.this.Coordinates.X,Person.this.Coordinates.Y);
+        Edit.Add_To_File_Int_2(Person.this.Coordinates.X,Person.this.Coordinates.Y,file);
 
 
         System.out.println("Enter Destination coordsX: ");
         Person.this.Destination.X = reader.nextInt();
         System.out.println("Enter Destination coordsY: ");
         Person.this.Destination.Y = reader.nextInt();
-        Edit.Add_To_File_Int_2(Person.this.Destination.X,Person.this.Destination.Y);
+        Edit.Add_To_File_Int_2(Person.this.Destination.X,Person.this.Destination.Y,file);
 
 
         System.out.println("Enter color: ");
         Person.this.Color = reader.nextInt();
-        Edit.Add_To_File_Int(Person.this.Color);
+        Edit.Add_To_File_Int(Person.this.Color,file);
     }
 
     public void List_Drivers(){

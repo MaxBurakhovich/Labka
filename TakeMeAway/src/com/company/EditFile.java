@@ -10,10 +10,10 @@ import java.util.Scanner;
 
 public class EditFile {
 
-    public static void Add_To_File_String(String SomeString) {
+    public static void Add_To_File_String(String SomeString,String FL) {
 
         try {
-            File file = new File("Clients.txt");
+            File file = new File(FL);
             FileWriter fw = new FileWriter(file, true);
             BufferedWriter bw = new BufferedWriter(fw);
             bw.append(SomeString);
@@ -25,10 +25,10 @@ public class EditFile {
         }
     }
 
-    public static void Add_To_File_Int(Integer SomeInt) {
+    public static void Add_To_File_Int(Integer SomeInt,String FL) {
 
         try {
-            File file = new File("Clients.txt");
+            File file = new File(FL);
             FileWriter fw = new FileWriter(file, true);
             BufferedWriter bw = new BufferedWriter(fw);
             String SomeString = new Integer(SomeInt).toString();
@@ -41,10 +41,10 @@ public class EditFile {
         }
     }
 
-    public static void Add_To_File_Int_2(Integer SomeInt, Integer OtherInt) {
+    public static void Add_To_File_Int_2(Integer SomeInt, Integer OtherInt,String FL) {
 
         try {
-            File file = new File("Clients.txt");
+            File file = new File(FL);
             FileWriter fw = new FileWriter(file, true);
             BufferedWriter bw = new BufferedWriter(fw);
             String SomeString = new Integer(SomeInt).toString();
@@ -60,10 +60,10 @@ public class EditFile {
         }
     }
 
-    public boolean Find_In_File(String Find) {
+    public boolean Find_In_File(String Find,String FL) {
 
         try {
-            File file = new File("Clients.txt");
+            File file = new File(FL);
             FileReader fr = new FileReader(file);
             BufferedReader br = new BufferedReader(fr);
             String st;
@@ -80,10 +80,10 @@ public class EditFile {
         return false;
     }
 
-    public int Count_Lines(){
+    public int Count_Lines(String FL){
         int count = 0;
         try {
-            File file = new File("Clients.txt");
+            File file = new File(FL);
             FileReader fr = new FileReader(file);
             BufferedReader br = new BufferedReader(fr);
             String st;
