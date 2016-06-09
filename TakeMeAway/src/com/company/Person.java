@@ -12,7 +12,7 @@ public class Person {
     public String Surname;
     public int PhoneNumber;
     public coordinate Coordinates;
-    public String Destination;
+    public coordinate Destination;
     public int Color;
 
     public void Add_New_Client(){
@@ -45,9 +45,11 @@ public class Person {
         Edit.Add_To_File_Int_2(Person.this.Coordinates.X,Person.this.Coordinates.Y);
 
 
-        System.out.println("Enter Destination: ");
-        Person.this.Destination = reader.nextLine();
-        Edit.Add_To_File_String(Person.this.Destination);
+        System.out.println("Enter Destination coordsX: ");
+        Person.this.Destination.X = reader.nextInt();
+        System.out.println("Enter Destination coordsY: ");
+        Person.this.Destination.Y = reader.nextInt();
+        Edit.Add_To_File_Int_2(Person.this.Destination.X,Person.this.Destination.Y);
 
 
         System.out.println("Enter color: ");

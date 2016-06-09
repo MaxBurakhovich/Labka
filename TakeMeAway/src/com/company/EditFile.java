@@ -98,33 +98,11 @@ public class EditFile {
         return count;
     }
 
-    public int Find_By_Destination(String Destination){
+    public int Find_By_Destination(int X,int Y,String FL){
         int ID = 0;
         int count = 0;
         try {
-            File file = new File("Clients.txt");
-            FileReader fr = new FileReader(file);
-            BufferedReader br = new BufferedReader(fr);
-            String st;
-            Boolean bool;
-            while ((st = br.readLine()) != null) {
-                count = count + 1;
-                if (st.contains(Destination)) {
-                    ID = count - 5;
-                }
-            }
-            br.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return ID;
-    }
-
-    public int Find_By_Coordinates(int X, int Y){
-        int ID = 0;
-        int count = 0;
-        try {
-            File file = new File("Clients.txt");
+            File file = new File(FL);
             FileReader fr = new FileReader(file);
             BufferedReader br = new BufferedReader(fr);
             String XX = new Integer(X).toString();
@@ -135,7 +113,32 @@ public class EditFile {
             while ((st = br.readLine()) != null) {
                 count = count + 1;
                 if (st.contains(XY)) {
-                    ID = count - 4;
+                    ID = (count - 6) / 7 + 1;
+                }
+            }
+            br.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return ID;
+    }
+
+    public int Find_By_Coordinates(int X, int Y, String FL){
+        int ID = 0;
+        int count = 0;
+        try {
+            File file = new File(FL);
+            FileReader fr = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+            String XX = new Integer(X).toString();
+            String YY = new Integer(Y).toString();
+            String XY = XX + "," +YY;
+            String st;
+            Boolean bool;
+            while ((st = br.readLine()) != null) {
+                count = count + 1;
+                if (st.contains(XY)) {
+                    ID = (count - 5) / 7 + 1;
                 }
             }
             br.close();
