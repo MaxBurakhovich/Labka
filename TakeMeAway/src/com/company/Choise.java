@@ -29,6 +29,7 @@ public class Choise {
             }
             case 2: {
                 Person.List_Drivers();
+                break;
             }
             case 3: {
                 Person.Add_New_Client();
@@ -47,7 +48,9 @@ public class Choise {
     public void Driver_Choise() {
 
         int choise;
+        String file = "Clients.txt";
 
+        int Line = Input.DriverIDco;
         System.out.println("1 - See more info about client");
         System.out.println("2 - List all clients");
         System.out.println("3 - Add new driver");
@@ -57,7 +60,7 @@ public class Choise {
         choise = reader.nextInt();
         switch (choise) {
             case 1: {
-                System.out.println("this function is under construction");
+                Edit.Read_After_Line(Line,file);
                 break;
             }
             case 2: {

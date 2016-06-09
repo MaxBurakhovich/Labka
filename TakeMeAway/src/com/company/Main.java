@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Main {
 
-
     public static void main(String[] args) {
         EditFile Edit = new EditFile();
         Client Client = new Client();

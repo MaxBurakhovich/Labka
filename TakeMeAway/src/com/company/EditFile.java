@@ -134,7 +134,6 @@ public class EditFile {
             String YY = new Integer(Y).toString();
             String XY = XX + "," +YY;
             String st;
-            Boolean bool;
             while ((st = br.readLine()) != null) {
                 count = count + 1;
                 if (st.contains(XY)) {
