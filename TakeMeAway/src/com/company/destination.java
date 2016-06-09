@@ -1,5 +1,6 @@
+package com.company;
 
 public class destination {
-    public char[] Name;
+    public String Name;
     public coordinate Coordinates;
 }

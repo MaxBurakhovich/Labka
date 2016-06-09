@@ -1,3 +1,4 @@
+package com.company;
 
 public class Driver extends Person {
     public int Capacity;
