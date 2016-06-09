@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
+import java.math.*;
 import java.util.jar.Attributes;
 
 public class Person {
@@ -135,5 +136,19 @@ public class Person {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public int DistanceAB(int Ax,int Ay, int Bx, int By){
+        int distance = 0;
+        int Ax2Ay2;
+        int Bx2By2;
+        int A;
+        int B;
+        Ax2Ay2 = Ax * Ax + Ay * Ay;
+        Bx2By2 = Bx * Bx + By * By;
+        A = Ax2Ay2^(1/2);
+        B = Bx2By2^(1/2);
+        distance = Math.abs(B - A);
+        return distance;
     }
 }

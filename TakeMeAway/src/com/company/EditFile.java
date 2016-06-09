@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.*;
 import java.util.Scanner;
 
 public class EditFile {
@@ -67,7 +68,6 @@ public class EditFile {
             FileReader fr = new FileReader(file);
             BufferedReader br = new BufferedReader(fr);
             String st;
-            Boolean bool;
             while ((st = br.readLine()) != null) {
                 if (st.contains(Find)) {
                     return true;
@@ -148,5 +148,25 @@ public class EditFile {
         return ID;
     }
 
+    public void Read_After_Line(int Line, String FL){
 
+        try {
+
+            File file = new File(FL);
+            FileReader fr = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+            String st;
+            for (int i = 0; i < Line; ++i) {
+                br.readLine();
+            }
+            int j;
+            for (j = 1; j < 8; j++) {
+                st = br.readLine();
+                System.out.println(st);
+            }
+            br.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
