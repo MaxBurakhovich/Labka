@@ -17,15 +17,52 @@ public class Input {
         int destinY = 0;
 
         System.out.println("Enter your coordinates: ");
-        System.out.print("Coord X: ");
-        coordsX = reader.nextInt();
-        System.out.print("Coord Y: ");
-        coordsY = reader.nextInt();
+
+        do {
+            System.out.print("Coord X: ");
+            while (!reader.hasNextInt()) {
+                System.out.println("That's not a number!");
+                System.out.print("Coord X: ");
+                reader.next();
+            }
+            coordsX = reader.nextInt();
+        }
+        while (coordsX < 0);
+
+        do {
+            System.out.print("Coord Y: ");
+            while (!reader.hasNextInt()) {
+                System.out.println("That's not a number!");
+                System.out.print("Coord Y: ");
+                reader.next();
+            }
+            coordsY = reader.nextInt();
+        }
+        while (coordsY < 0);
+
         System.out.println("Enter your destination: ");
-        System.out.print("Coord X: ");
-        destinX = reader.nextInt();
-        System.out.print("Coord Y: ");
-        destinY = reader.nextInt();
+
+        do {
+            System.out.print("Coord X: ");
+            while (!reader.hasNextInt()) {
+                System.out.println("That's not a number!");
+                System.out.print("Coord X: ");
+                reader.next();
+            }
+            destinX = reader.nextInt();
+        }
+        while (destinX < 0);
+
+        do {
+            System.out.print("Coord Y: ");
+            while (!reader.hasNextInt()) {
+                System.out.println("That's not a number!");
+                System.out.print("Coord Y: ");
+                reader.next();
+            }
+            destinY = reader.nextInt();
+        }
+        while (destinY < 0);
 
         String file = "drivers.txt";
         DriverIDde = Edit.Find_By_Destination(destinX, destinY, file);

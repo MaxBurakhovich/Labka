@@ -158,10 +158,43 @@ public class EditFile {
             for (int i = 0; i < Line; ++i) {
                 br.readLine();
             }
-            int j;
-            for (j = 1; j < 8; j++) {
-                st = br.readLine();
-                System.out.println(st);
+            int j = 1;
+            switch(j){
+                case 1: {
+                    st = br.readLine();
+                    System.out.println("ID: " + st);
+                    j=2;
+                }
+                case 2: {
+                    st = br.readLine();
+                    System.out.println("Name: " + st);
+                    j=3;
+                }
+                case 3: {
+                    st = br.readLine();
+                    System.out.println("Surname: " + st);
+                    j=4;
+                }
+                case 4: {
+                    st = br.readLine();
+                    System.out.println("PhoneNumber: " + st);
+                    j=5;
+                }
+                case 5: {
+                    st = br.readLine();
+                    System.out.println("CoordsXY: " + st);
+                    j=6;
+                }
+                case 6: {
+                    st = br.readLine();
+                    System.out.println("DestinationXY: " + st);
+                    j=7;
+                }
+                case 7: {
+                    st = br.readLine();
+                    System.out.println("Color: " + st);
+                    break;
+                }
             }
             br.close();
         } catch (IOException e) {
